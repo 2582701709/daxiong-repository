@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.dao.AppMapper">
+<select id="selDev"  resultType="com.app.pojo.Dev_User">
+select * from dev_user
+</select>
+<insert id="insDev" parameterType="com.app.pojo.Dev_User"> 
+insert into dev_user(id,devCode,devName,devPassword,devEmail,devInfo,createBy,creationDate,modifyBy,modifyDate) 
+values(#{id},#{devCode},#{devName},#{devPassword},#{devEmail},#{devInfo},#{createBy},#{creationDate},#{modifyBy},#{modifyDate})
+</insert>
+<select id="selAll" resultType="com.app.pojo.Dev_User">
+select * from dev_user
+</select>
+</mapper>
